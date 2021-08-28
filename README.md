@@ -1,2 +1,21 @@
-# hello-world-docker-action
-test
+# Hello world docker action
+
+This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+
+## Inputs
+
+## `greet`
+
+**Required** The name of the person to greet. Default `"World"`.
+
+## Outputs
+
+## `time`
+
+The time we greeted you.
+
+## Example usage
+
+uses: actions/hello-world-docker-action@v1
+with:
+  greet: 'Yes'
