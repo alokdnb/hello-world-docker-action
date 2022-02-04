@@ -16,6 +16,7 @@ jobs:
       - name: Get the output one more time
         run: echo "The time was ${{ steps.hello.outputs.time }}"     
   bye_job:
+    if: ${{ github.ref == 'refs/heads/main' }} # only deploy from 'main'
     runs-on: ubuntu-latest
     name: a_job_to_say_bye
     needs: [hello_world_job]
